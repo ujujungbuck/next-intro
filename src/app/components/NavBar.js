@@ -7,14 +7,11 @@ export default function NavBar() {
   return (
     <nav>
       <img src="/vercel.svg" />
-      <div>
-        <Link href="/" style={{ color: pathname === "/" ? "active" : "" }}>
+      <div className="nav">
+        <Link href="/" className={pathname === "/" ? "active" : ""}>
           Home
         </Link>
-        <Link
-          href="/about"
-          style={{ color: pathname === "/about" ? "active" : "" }}
-        >
+        <Link href="/about" className={pathname === "/about" ? "active" : ""}>
           About
         </Link>
       </div>
@@ -32,6 +29,10 @@ export default function NavBar() {
         img {
           max-width: 100px;
           margin-bottom: 5px;
+        }
+        .nav {
+          font-weight: 600;
+          font-size: 18px;
         }
         .active {
           color: gray;

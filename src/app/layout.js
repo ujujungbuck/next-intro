@@ -18,8 +18,17 @@ export default function RootLayout({ children }) {
         {children}
         <style jsx global>{`
           body {
-            margin: 0;
+            max-width: 520px;
+            width: 100%;
+            margin: 0 auto;
             background-color: white;
+          }
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
+          h2 {
+            margin: 10px 150px;
           }
         `}</style>
       </body>
