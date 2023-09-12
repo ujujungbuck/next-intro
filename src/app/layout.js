@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
         {children}
         <style jsx global>{`
           body {
+            margin: 0;
             background-color: white;
           }
         `}</style>
