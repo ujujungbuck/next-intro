@@ -6,7 +6,7 @@ export default function NavBar() {
   const pathname = usePathname();
   return (
     <nav>
-      <img src="/vercel.svg" />
+      <img src="/logo.svg" />
       <div className="nav">
         <Link href="/" className={pathname === "/" ? "active" : ""}>
           Home
