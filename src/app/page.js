@@ -1,11 +1,23 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+// import { useSearchParams } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 export default function Home() {
   const router = useRouter();
+  //const params = useLocation();
+  //console.log(params);
   const onClick = (id) => {
-    router.push(`/movies/${id}`);
+    params.push(
+      {
+        //pathname: `/movies/${id}`,
+        query: {
+          title: "tomato",
+        },
+      },
+      `/movies/${id}`
+    );
   };
   const [movies, setMovies] = useState([]);
   useEffect(() => {

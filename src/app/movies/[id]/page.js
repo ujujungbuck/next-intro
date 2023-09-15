@@ -1,13 +1,8 @@
 "use client";
-//import { useRouter } from "next/navigation";
-//import { usePathname } from "next/navigation";
-import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
+
 export default function MovieId() {
-  //const router = useRouter();
-  //const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const router = useRouter();
   //console.log(router);
-  //console.log(pathname);
-  console.log(searchParams);
   return "mobie idd";
 }
