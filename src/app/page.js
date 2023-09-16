@@ -1,23 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-// import { useSearchParams } from "react-router-dom";
-// import { useLocation } from "react-router-dom";
 
 export default function Home() {
   const router = useRouter();
-  //const params = useLocation();
-  //console.log(params);
-  const onClick = (id) => {
-    params.push(
-      {
-        //pathname: `/movies/${id}`,
-        query: {
-          title: "tomato",
-        },
-      },
-      `/movies/${id}`
-    );
+  const onClick = (id, title) => {
+    //router.push(`/movies/${id}`);
+    router.push(`/movies/${title}`, {
+      query: { title },
+    });
   };
   const [movies, setMovies] = useState([]);
   useEffect(() => {
@@ -35,7 +26,7 @@ export default function Home() {
         {!movies.length && <h4>Loading...</h4>}
         {movies?.map((movie) => (
           <div
-            onClick={() => onClick(movie.id)}
+            onClick={() => onClick(movie.id, movie.original_title)}
             className="movie"
             key={movie.id}
           >
