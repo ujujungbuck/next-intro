@@ -5,7 +5,9 @@ export default function MovieId() {
   const pathname = usePathname();
   return (
     <div>
-      <h4>{pathname.slice(8).split("%20").join(" ") || "Loading"}</h4>
+      <h4>
+        What you pick : {pathname.slice(8).split("%20").join(" ") || "Loading"}
+      </h4>
       <style jsx>{`
         h4 {
           display: flex;
